@@ -1,4 +1,10 @@
 {% extends "layout.html" %}
 {% block content %}
-    <h1>Home Page 2</h1>
+    
+    {% if message %}
+    <p>{{ message }}</p>
+    {% endif %}
+
+    <h1>Home Page</h1>
+    
 {% endblock content %}

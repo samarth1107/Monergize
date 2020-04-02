@@ -38,12 +38,20 @@
         <div class="col-md-4">
           <div class="content-section">
             <h3>Our Sidebar</h3>
-            <p class='text-muted'>You can put any information here you'd like.
+            <p class='text-muted'>Sidebar
               <a class="list-group-item list-group-item-light" href="/">Flask Blog</a>
               <a class="list-group-item list-group-item-light" href="{{ url_for('home') }}">Home</a>
               <a class="list-group-item list-group-item-light" href="{{ url_for('home') }}">About</a>
+
+              {% if current_user.is_authenticated %}
+              <a class="list-group-item list-group-item-light" href="{{ url_for('logout') }}">Logout</a>
+              <a class="list-group-item list-group-item-light" href="{{ url_for('account') }}">Account</a>
+              {% else %}
               <a class="list-group-item list-group-item-light" href="{{ url_for('login') }}">Login</a>
               <a class="list-group-item list-group-item-light" href="{{ url_for('home') }}">Register</a>
+              {% endif %}
+              
+              
             </p>
           </div>
         </div>

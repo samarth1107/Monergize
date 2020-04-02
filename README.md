@@ -1,7 +1,7 @@
 # Monergize
-Bank portal for companies and customers
+Bank portal for companies and customers  
 
-TO run sql database
+TO run sql database  
 (1) In mysql workbench database should be stored as bank name and made using bank folder import file  
 (2) mysql service should be running  
 (3) bank should be at localhost  
